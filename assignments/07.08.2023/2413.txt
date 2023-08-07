@@ -1,0 +1,13 @@
+class Solution(object):
+    def smallestEvenMultiple(self, n):
+        """
+        :type n: int
+        :rtype: int
+        """
+        i=2
+        a=2*n 
+        for i in range(i, a+1):
+            if  i%n==0 and i%2==0:
+                return i
+            else:
+                i=i+2
