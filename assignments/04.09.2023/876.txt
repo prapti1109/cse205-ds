@@ -1,0 +1,8 @@
+class Solution:
+    def middleNode(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        slow_tortoise=head
+        fast_tortoise=head
+        while fast_tortoise!=None and fast_tortoise.next!=None:
+            slow_tortoise=slow_tortoise.next
+            fast_tortoise=fast_tortoise.next.next
+        return slow_tortoise

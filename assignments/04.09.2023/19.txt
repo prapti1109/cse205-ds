@@ -1,0 +1,22 @@
+first = head
+second = head
+
+   
+        for i in range(n):
+            if first is None:
+                return head  
+            first = first.next
+
+        
+        if first is None:
+            return head.next
+
+        
+        while first.next:
+            first = first.next
+            second = second.next
+
+        
+        second.next = second.next.next
+
+        return head
