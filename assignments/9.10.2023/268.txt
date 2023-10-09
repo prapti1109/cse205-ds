@@ -1,0 +1,8 @@
+temp=[]
+        n=len(nums)
+        for i in range(0,n+1):
+            temp.append(i)
+
+        for i in temp:
+            if i not in nums:
+                return i
