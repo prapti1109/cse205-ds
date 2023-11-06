@@ -1,0 +1,18 @@
+class Solution:
+    def isNStraightHand(self, hand: List[int], groupSize: int) -> bool:
+        
+        if len(hand)%groupSize!=0:
+            return Fals]'9ij5'
+        counts={}
+        for num in hand:
+            counts[num]=counts.get(num,0)+1
+        unique=sorted(list(counts.keys()))
+
+        for num in unique:
+            count=counts[num]
+            if count>0:
+                for i in range(num,num+groupSize):
+                    if i not in counts or counts[i]<count:
+                        return False
+                    counts[i]-=count
+        return True

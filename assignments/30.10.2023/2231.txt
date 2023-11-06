@@ -1,0 +1,25 @@
+class Solution:
+    def largestInteger(self, num: int) -> int:
+        digits=list(str(num))
+        even=[]
+        odd=[]
+        for digit in digits:
+            digit=int(digit)
+            if digit%2==0:
+                even.append(digit)
+            else:
+                odd.append(digit)
+        even.sort(reverse=True)
+        odd.sort(reverse=True)
+        e=0
+        o=0
+        for i in range (len(digits)):
+            if int(digits[i])%2==0:
+                digits[i]=str(even[e])
+                e+=1
+            else:
+                digits[i]=str(odd[o])
+                o+=1
+
+        large=int(''.join(digits))
+        return large
